@@ -10,7 +10,7 @@ contract Example {
     }
 
 
-    function payOwner(uint256 _amount) external {
+    function payOwner(uint256 _amount) external payable {
         (bool sent, ) = owner.call{value: _amount}("");
         require(msg.value == amount);
         lastExecuted = block.number;
