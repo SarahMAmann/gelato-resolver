@@ -1,5 +1,7 @@
 pragma solidity 0.8.11;
 
+//note: a wrapper contract with funds would be needed for this in production because the payable function requires ETH
+
 
 interface IExample {
    function payOwner(uint256 _amount) external;
